@@ -2,6 +2,7 @@ package main
 
 import (
 	"mygram/db"
+	_ "mygram/docs"
 	"mygram/server"
 	"mygram/server/services"
 	"os"
