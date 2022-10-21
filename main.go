@@ -4,6 +4,7 @@ import (
 	"mygram/db"
 	"mygram/server"
 	"mygram/server/services"
+	"os"
 )
 
 /*
@@ -13,8 +14,9 @@ GLN038MNC007
 */
 
 func main() {
+	var PORT = os.Getenv("PORT")
 	db := db.ConnectGorm()
 	getDB := services.Handler_MyGram(db)
 	mygram := server.UserRouther(getDB)
-	mygram.Start(":5000")
+	mygram.Start(":" + PORT)
 }

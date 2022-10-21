@@ -10,10 +10,10 @@ import (
 )
 
 const (
-	host   = "localhost"
-	port   = "5432"
+	host   = "containers-us-west-101.railway.app"
+	port   = "5901"
 	user   = "postgres"
-	pass   = "sman60jakarta"
+	pass   = "dDGbTqfhh8DIfxrss7kT"
 	dbname = "railway"
 )
 

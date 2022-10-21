@@ -26,6 +26,10 @@ func (r *Router) Start(port string) {
 	})
 
 	/* List API */
+
+	// Swagger
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
+
 	// Users
 	router.POST("/users/register", r.control.Register_User)
 	router.POST("/users/login", r.control.Login_User)
@@ -46,8 +50,6 @@ func (r *Router) Start(port string) {
 	router.GET("/socialmedias", r.control.SocialMedias_Get)
 	router.PUT("/socialmedias/:socialMediaId", r.control.SocialMedias_Put)
 	router.DELETE("/socialmedias/:socialMediaId", r.control.SocialMedias_Delete)
-	// Swagger
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	router.Run(port)
 }
