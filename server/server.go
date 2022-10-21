@@ -22,7 +22,7 @@ func (r *Router) Start(port string) {
 	router := gin.New()
 
 	router.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"data": "Welcome To Sample program swagger"})
+		c.JSON(http.StatusOK, gin.H{"data": "Welcome Final Project My Gram"})
 	})
 
 	/* List API */
